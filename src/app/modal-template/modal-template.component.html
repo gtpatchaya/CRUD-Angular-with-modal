@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">{{text_titlename}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="modalService.close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form name="myForm">
+    <div class="form-group">
+      <label >Country name</label>
+      <div class="input-group">
+
+        <input type="text" [value]="this.areaname" (input)="this.areaname = $event.target.value"   name="area_name" class="form-control" >
+       
+      </div>
+      <label>Area size</label>
+      <div class="input-group">
+     
+        <input  type="number" [value]="this.areasize" (input)="this.areasize = $event.target.value"   id="area_size"  class="form-control">
+
+      </div>
+      <label >Population</label>
+      <div class="input-group">
+
+        <input type="number" id="population"[value]="this.population" (input)="this.population = $event.target.value"    class="form-control">
+
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="save(this.id)">Save</button>
+</div>
